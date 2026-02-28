@@ -297,7 +297,7 @@ Contributions are welcome! Key areas for enhancement:
 ## Support & Issues
 
 - **Bug Reports**: [Create an issue](../../issues) with device info and logs
-- **Feature Requests**: [Start a discussion](https://github.com/orgs/permissionlesstech/discussions)
+- **Feature Requests**: [Start a discussion](https://github.com/offlineapps/bitchat-android/discussions)
 - **Security Issues**: Email security concerns privately
 - **iOS Compatibility**: Cross-reference with [original iOS repo](https://github.com/jackjackbits/bitchat)
 
