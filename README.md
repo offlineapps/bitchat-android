@@ -27,18 +27,18 @@ This project is released into the public domain. See the [LICENSE](LICENSE.md) f
 
 ## Features
 
-- ** Cross-Platform Compatible**: Full protocol compatibility with iOS bitchat
-- ** Decentralized Mesh Network**: Automatic peer discovery and multi-hop message relay over Bluetooth LE
-- ** End-to-End Encryption**: X25519 key exchange + AES-256-GCM for private messages
-- ** Channel-Based Chats**: Topic-based group messaging with optional password protection
-- ** Store & Forward**: Messages cached for offline peers and delivered when they reconnect
-- ** Privacy First**: No accounts, no phone numbers, no persistent identifiers
-- ** IRC-Style Commands**: Familiar `/join`, `/msg`, `/who` style interface
-- ** Message Retention**: Optional channel-wide message saving controlled by channel owners
-- ** Emergency Wipe**: Triple-tap logo to instantly clear all data
-- ** Modern Android UI**: Jetpack Compose with Material Design 3
-- ** Dark/Light Themes**: Terminal-inspired aesthetic matching iOS version
-- ** Battery Optimization**: Adaptive scanning and power management
+- **Cross-Platform Compatible**: Full protocol compatibility with iOS bitchat
+- **Decentralized Mesh Network**: Automatic peer discovery and multi-hop message relay over Bluetooth LE
+- **End-to-End Encryption**: X25519 key exchange + AES-256-GCM for private messages
+- **Channel-Based Chats**: Topic-based group messaging with optional password protection
+- **Store & Forward**: Messages cached for offline peers and delivered when they reconnect
+- **Privacy First**: No accounts, no phone numbers, no persistent identifiers
+- **IRC-Style Commands**: Familiar `/join`, `/msg`, `/who` style interface
+- **Message Retention**: Optional channel-wide message saving controlled by channel owners
+- **Emergency Wipe**: Triple-tap logo to instantly clear all data
+- **Modern Android UI**: Jetpack Compose with Material Design 3
+- **Dark/Light Themes**: Terminal-inspired aesthetic matching iOS version
+- **Battery Optimization**: Adaptive scanning and power management
 
 ## Android Setup
 
