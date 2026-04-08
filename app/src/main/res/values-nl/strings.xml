@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">bitchat</string>
+    <string name="app_name">bluewhale</string>
 
     <!-- Toestemmingsredenen -->
     <string name="permission_bluetooth_rationale">Bluetooth-toestemming is vereist voor peer-to-peer berichten zonder internet.</string>
@@ -29,12 +29,12 @@
     <string name="battery_optimization_not_required">Batterijoptimalisatie niet vereist</string>
     <string name="battery_optimization_checking">Batterijoptimalisatie controleren</string>
     <string name="battery_optimization_why_disable">Waarom batterijoptimalisatie uitschakelen?</string>
-    <string name="battery_optimization_explanation">bitchat draait op de achtergrond om meshnetwerkverbindingen met apparaten in de buurt te onderhouden. Batterijoptimalisatie kan deze verbindingen onderbreken, waardoor berichten vertraagd of gemist worden.\n\nHet uitschakelen van batterijoptimalisatie zorgt voor betrouwbare peer-to-peer communicatie.</string>
+    <string name="battery_optimization_explanation">bluewhale draait op de achtergrond om meshnetwerkverbindingen met apparaten in de buurt te onderhouden. Batterijoptimalisatie kan deze verbindingen onderbreken, waardoor berichten vertraagd of gemist worden.\n\nHet uitschakelen van batterijoptimalisatie zorgt voor betrouwbare peer-to-peer communicatie.</string>
     <string name="battery_optimization_disable_button">Batterijoptimalisatie uitschakelen</string>
-    <string name="battery_optimization_note">Opmerking: U kunt deze instelling later wijzigen in Android-instellingen &gt; Apps &gt; bitchat &gt; Batterij</string>
-    <string name="battery_optimization_not_supported_explanation">Uw apparaat vereist geen batterijoptimalisatie-instellingen. bitchat zal normaal draaien.</string>
-    <string name="battery_optimization_not_supported_message">Uw apparaat vereist geen batterijoptimalisatie-instellingen. bitchat zal normaal draaien.</string>
-    <string name="battery_optimization_success_message">bitchat kan betrouwbaar op de achtergrond draaien</string>
+    <string name="battery_optimization_note">Opmerking: U kunt deze instelling later wijzigen in Android-instellingen &gt; Apps &gt; bluewhale &gt; Batterij</string>
+    <string name="battery_optimization_not_supported_explanation">Uw apparaat vereist geen batterijoptimalisatie-instellingen. bluewhale zal normaal draaien.</string>
+    <string name="battery_optimization_not_supported_message">Uw apparaat vereist geen batterijoptimalisatie-instellingen. bluewhale zal normaal draaien.</string>
+    <string name="battery_optimization_success_message">bluewhale kan betrouwbaar op de achtergrond draaien</string>
     <string name="battery_optimization_benefits">• Zorgt voor betrouwbare berichtbezorging\n• Onderhoudt meshnetwerkconnectiviteit\n• Staat berichtrelay op achtergrond toe\n• Voorkomt verbindingsonderbrekingen</string>
     <string name="battery_optimization_check_again">Opnieuw controleren</string>
     <string name="battery_optimization_skip">Nu overslaan</string>
@@ -46,7 +46,7 @@
     <string name="notification_summary_more">en %1$d meer</string>
     <string name="notification_messages_from_people">%1$d berichten van %2$d personen</string>
     <string name="notification_more_conversations">en %1$d meer conversaties</string>
-    <string name="notification_active_peers_title">👥 bitchatters in de buurt!</string>
+    <string name="notification_active_peers_title">👥 bluewhaleters in de buurt!</string>
     <string name="notification_active_peers_one">1 persoon in de buurt</string>
     <string name="notification_active_peers_many">%1$d personen in de buurt</string>
     <string name="notification_new_messages">Nieuwe berichten</string>
@@ -57,8 +57,8 @@
     <string name="notification_new_activity_in">Nieuwe activiteit in %1$s</string>
     <string name="notification_messages_in">Berichten in %1$s</string>
     <string name="notification_joined_conversation">%1$s is toegetreden tot het gesprek</string>
-    <string name="notification_geohash_summary_title_mentions">bitchat - %1$d vermeldingen</string>
-    <string name="notification_geohash_summary_title">bitchat - locatiechats</string>
+    <string name="notification_geohash_summary_title_mentions">bluewhale - %1$d vermeldingen</string>
+    <string name="notification_geohash_summary_title">bluewhale - locatiechats</string>
     <string name="notification_geohash_summary_text">%1$d berichten van %2$d locaties</string>
     <string name="notification_mesh_mention_title_singular">Vermeld in meshchat</string>
     <string name="notification_mesh_mention_title_plural">%1$d vermeldingen in meshchat</string>
@@ -253,24 +253,24 @@
     <!-- Onboarding-schermen -->
     <string name="location_services_required">Locatiediensten vereist</string>
     <string name="privacy_first">Privacy eerst</string>
-    <string name="location_explanation">bitchat volgt NIET uw locatie.\n\nLocatiediensten zijn vereist voor Bluetooth-scanning en voor de geohash-chatfunctie.</string>
-    <string name="location_needs_for">bitchat heeft locatiediensten nodig voor:</string>
+    <string name="location_explanation">bluewhale volgt NIET uw locatie.\n\nLocatiediensten zijn vereist voor Bluetooth-scanning en voor de geohash-chatfunctie.</string>
+    <string name="location_needs_for">bluewhale heeft locatiediensten nodig voor:</string>
     <string name="location_needs_bullets">• Bluetooth-apparaat scanning\n• Ontdekken van gebruikers in de buurt op meshnetwerk\n• Geohash-chatfunctie\n• Geen tracking of locatieverzameling</string>
     <string name="open_location_settings">Locatie-instellingen openen</string>
     <string name="check_again">Opnieuw controleren</string>
     <string name="location_services_unavailable">Locatiediensten niet beschikbaar</string>
-    <string name="location_unavailable_explanation">Locatiediensten zijn niet beschikbaar op dit apparaat. Dit is ongebruikelijk omdat locatiediensten standaard zijn op Android-apparaten.\n\nbitchat heeft locatiediensten nodig om Bluetooth-scanning goed te laten werken (Android-vereiste). Zonder dit kan de app geen gebruikers in de buurt ontdekken.</string>
+    <string name="location_unavailable_explanation">Locatiediensten zijn niet beschikbaar op dit apparaat. Dit is ongebruikelijk omdat locatiediensten standaard zijn op Android-apparaten.\n\nbluewhale heeft locatiediensten nodig om Bluetooth-scanning goed te laten werken (Android-vereiste). Zonder dit kan de app geen gebruikers in de buurt ontdekken.</string>
     <string name="checking_location_services">Locatiediensten controleren…</string>
     <string name="bluetooth_required">Bluetooth vereist</string>
-    <string name="bluetooth_needs_for">bitchat heeft Bluetooth nodig om:</string>
+    <string name="bluetooth_needs_for">bluewhale heeft Bluetooth nodig om:</string>
     <string name="bluetooth_needs_bullets">• Gebruikers in de buurt te ontdekken\n• Meshnetwerkverbindingen te maken\n• Berichten te verzenden en ontvangen\n• Te werken zonder internet of servers</string>
     <string name="enable_bluetooth">Bluetooth inschakelen</string>
     <string name="bluetooth_not_supported">Bluetooth niet ondersteund</string>
-    <string name="bluetooth_unsupported_explanation">Dit apparaat ondersteunt geen Bluetooth Low Energy (BLE), wat vereist is om bitchat te laten functioneren.\n\nbitchat heeft BLE nodig om meshnetwerken te maken en te communiceren met apparaten in de buurt zonder internet.</string>
+    <string name="bluetooth_unsupported_explanation">Dit apparaat ondersteunt geen Bluetooth Low Energy (BLE), wat vereist is om bluewhale te laten functioneren.\n\nbluewhale heeft BLE nodig om meshnetwerken te maken en te communiceren met apparaten in de buurt zonder internet.</string>
     <string name="checking_bluetooth_status">Bluetooth-status controleren…</string>
     <string name="battery_optimization_detected_title">batterijoptimalisatie gedetecteerd</string>
     <string name="battery_optimization_enabled_title">Batterijoptimalisatie ingeschakeld</string>
-    <string name="battery_optimization_explanation_short">bitchat moet op de achtergrond draaien om meshverbindingen te onderhouden. batterijoptimalisatie kan deze verbindingen onderbreken.</string>
+    <string name="battery_optimization_explanation_short">bluewhale moet op de achtergrond draaien om meshverbindingen te onderhouden. batterijoptimalisatie kan deze verbindingen onderbreken.</string>
     <string name="benefits_of_disabling">Voordelen van uitschakelen</string>
     <string name="battery_benefits_short">• betrouwbare berichtbezorging\n• onderhoudt meshconnectiviteit\n• voorkomt verbindingsonderbrekingen</string>
     <string name="disable_battery_optimization">Batterijoptimalisatie uitschakelen</string>
@@ -285,7 +285,7 @@
     <string name="privacy_bullets">• geen tracking of gegevensverzameling\n• Bluetooth-meshchats zijn volledig offline\n• Geohash-chats gebruiken internet</string>
     <string name="permissions_header">toestemmingen</string>
     <string name="grant_permissions">Toestemmingen verlenen</string>
-    <string name="location_tracking_warning">bitchat volgt NIET uw locatie</string>
+    <string name="location_tracking_warning">bluewhale volgt NIET uw locatie</string>
     <string name="geohash_people_header">PERSONEN</string>
     <string name="nobody_around">niemand in de buurt…</string>
     <string name="you_suffix"> (jij)</string>
@@ -314,14 +314,14 @@
     <string name="pow_label_format">pow: %1$dbit</string>
 
     <!-- Toestemmingsbeschrijvingen -->
-    <string name="perm_nearby_devices_desc">Vereist om bitchat-gebruikers via Bluetooth te ontdekken</string>
-    <string name="perm_nearby_devices_system">bitchat toestaan om verbinding te maken met apparaten in de buurt</string>
-    <string name="perm_location_desc">Vereist door Android om bitchat-gebruikers in de buurt via Bluetooth te ontdekken</string>
-    <string name="perm_location_system">bitchat heeft dit nodig om te scannen naar apparaten in de buurt</string>
+    <string name="perm_nearby_devices_desc">Vereist om bluewhale-gebruikers via Bluetooth te ontdekken</string>
+    <string name="perm_nearby_devices_system">bluewhale toestaan om verbinding te maken met apparaten in de buurt</string>
+    <string name="perm_location_desc">Vereist door Android om bluewhale-gebruikers in de buurt via Bluetooth te ontdekken</string>
+    <string name="perm_location_system">bluewhale heeft dit nodig om te scannen naar apparaten in de buurt</string>
     <string name="perm_notifications_desc">Ontvang meldingen wanneer u privéberichten ontvangt</string>
-    <string name="perm_notifications_system">bitchat toestaan om u meldingen te sturen</string>
-    <string name="perm_battery_desc">Schakel batterijoptimalisatie uit om ervoor te zorgen dat bitchat betrouwbaar op de achtergrond draait en meshnetwerkverbindingen onderhoudt</string>
-    <string name="perm_battery_system">bitchat toestaan om zonder batterijbeperkingen te draaien</string>
+    <string name="perm_notifications_system">bluewhale toestaan om u meldingen te sturen</string>
+    <string name="perm_battery_desc">Schakel batterijoptimalisatie uit om ervoor te zorgen dat bluewhale betrouwbaar op de achtergrond draait en meshnetwerkverbindingen onderhoudt</string>
+    <string name="perm_battery_system">bluewhale toestaan om zonder batterijbeperkingen te draaien</string>
 
     <!-- Toestemmingstypen -->
     <string name="perm_type_nearby_devices">Apparaten in de buurt</string>
@@ -340,7 +340,7 @@
 
     <!-- Symbolen &amp; speciale strings -->
     <string name="at_symbol">@</string>
-    <string name="app_brand">bitchat/</string>
+    <string name="app_brand">bluewhale/</string>
     <string name="channel_count_prefix"> · ⧉ </string>
     <string name="mention_suggestion_at">@%1$s</string>
     <string name="image_counter">%1$d / %2$d</string>

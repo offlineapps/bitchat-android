@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Dark theme -->
-    <style name="Theme.BitchatAndroid" parent="Theme.AppCompat.DayNight.NoActionBar">
+    <style name="Theme.BluewhaleAndroid" parent="Theme.AppCompat.DayNight.NoActionBar">
         <!-- Enable edge-to-edge content -->
         <item name="android:windowTranslucentStatus">false</item>
         <item name="android:windowTranslucentNavigation">false</item>
