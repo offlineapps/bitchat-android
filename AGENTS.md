@@ -1,9 +1,9 @@
-# Bitchat Android - Agent Guide
+# Bluewhale Android - Agent Guide
 
-This document provides context, architectural insights, and development standards for AI agents working on the Bitchat Android codebase.
+This document provides context, architectural insights, and development standards for AI agents working on the Bluewhale Android codebase.
 
 ## 1. Project Overview
-**Bitchat** is a decentralized, off-grid communication application focused on privacy and censorship resistance. It utilizes mesh networking (primarily Bluetooth LE and Tor/Arti) to enable peer-to-peer messaging without centralized servers.
+**Bluewhale** is a decentralized, off-grid communication application focused on privacy and censorship resistance. It utilizes mesh networking (primarily Bluetooth LE and Tor/Arti) to enable peer-to-peer messaging without centralized servers.
 
 **Key Technologies:**
 - **Language:** Kotlin (JVM Target 1.8)
@@ -16,7 +16,7 @@ This document provides context, architectural insights, and development standard
 ## 2. Architecture & Directory Structure
 The application follows a clean architecture pattern, heavily modularized by feature within the `app` module.
 
-**Root Package:** `com.bitchat.android`
+**Root Package:** `com.bluewhale.android`
 
 | Directory | Purpose |
 |-----------|---------|

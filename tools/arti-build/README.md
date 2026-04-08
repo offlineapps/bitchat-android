@@ -4,7 +4,7 @@ This directory contains the build scripts and source files for compiling the cus
 
 ## Overview
 
-bitchat-android uses a custom-built Arti library instead of Guardian Project's outdated `arti-mobile-ex` AAR. This provides:
+bluewhale-android uses a custom-built Arti library instead of Guardian Project's outdated `arti-mobile-ex` AAR. This provides:
 
 - **Smaller APK size**: ~11MB total vs ~140MB with Guardian Project AAR (28x reduction)
 - **Latest Arti version**: Currently v1.7.0 with pure Rust TLS (rustls)
