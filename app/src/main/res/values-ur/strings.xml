@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">bitchat</string>
+    <string name="app_name">bluewhale</string>
 
     <!-- اجازات کی وضاحت -->
     <string name="permission_bluetooth_rationale">بلوٹوتھ کی اجازت انٹرنیٹ کے بغیر دوسروں سے براہ راست چیٹ کرنے کے لیے ضروری ہے۔</string>
@@ -29,12 +29,12 @@
     <string name="battery_optimization_not_required">بیٹری کی اصلاح ضروری نہیں</string>
     <string name="battery_optimization_checking">بیٹری کی اصلاح چیک کر رہے ہیں</string>
     <string name="battery_optimization_why_disable">بیٹری کی اصلاح کیوں بند کریں؟</string>
-    <string name="battery_optimization_explanation">bitchat قریبی آلات کے ساتھ میش کنیکشن برقرار رکھنے کے لیے پس منظر میں چلتا ہے۔ بیٹری کی اصلاح ان کنیکشنز کو خراب کر سکتی ہے، جس سے پیغامات دیر سے پہنچیں یا کھو جائیں۔\n\nبیٹری کی اصلاح بند کرنا قابل اعتماد پیئر‑ٹو‑پیئر کمیونیکیشن کو یقینی بناتا ہے۔</string>
+    <string name="battery_optimization_explanation">bluewhale قریبی آلات کے ساتھ میش کنیکشن برقرار رکھنے کے لیے پس منظر میں چلتا ہے۔ بیٹری کی اصلاح ان کنیکشنز کو خراب کر سکتی ہے، جس سے پیغامات دیر سے پہنچیں یا کھو جائیں۔\n\nبیٹری کی اصلاح بند کرنا قابل اعتماد پیئر‑ٹو‑پیئر کمیونیکیشن کو یقینی بناتا ہے۔</string>
     <string name="battery_optimization_disable_button">بیٹری کی اصلاح بند کریں</string>
-    <string name="battery_optimization_note">نوٹ: آپ بعد میں Android سیٹنگز &gt; ایپس &gt; bitchat &gt; بیٹری میں اسے تبدیل کر سکتے ہیں۔</string>
-    <string name="battery_optimization_not_supported_explanation">آپ کے آلے کو بیٹری کی اصلاح کی سیٹنگز کی ضرورت نہیں۔ bitchat عام طور پر چلے گا۔</string>
-    <string name="battery_optimization_not_supported_message">آپ کے آلے کو بیٹری کی اصلاح کی سیٹنگز کی ضرورت نہیں۔ bitchat عام طور پر چلے گا۔</string>
-    <string name="battery_optimization_success_message">bitchat پس منظر میں قابل اعتماد طور پر چل سکتا ہے</string>
+    <string name="battery_optimization_note">نوٹ: آپ بعد میں Android سیٹنگز &gt; ایپس &gt; bluewhale &gt; بیٹری میں اسے تبدیل کر سکتے ہیں۔</string>
+    <string name="battery_optimization_not_supported_explanation">آپ کے آلے کو بیٹری کی اصلاح کی سیٹنگز کی ضرورت نہیں۔ bluewhale عام طور پر چلے گا۔</string>
+    <string name="battery_optimization_not_supported_message">آپ کے آلے کو بیٹری کی اصلاح کی سیٹنگز کی ضرورت نہیں۔ bluewhale عام طور پر چلے گا۔</string>
+    <string name="battery_optimization_success_message">bluewhale پس منظر میں قابل اعتماد طور پر چل سکتا ہے</string>
     <string name="battery_optimization_benefits">• پیغامات کی قابل اعتماد ڈیلیوری\n• میش کنیکشن برقرار رکھنا\n• پس منظری پیغام فارورڈنگ\n• منطقی کنیکشن سے بچاؤ</string>
     <string name="battery_optimization_check_again">دوبارہ چیک کریں</string>
     <string name="battery_optimization_skip">ابھی چھوڑیں</string>
@@ -46,7 +46,7 @@
     <string name="notification_summary_more">اور %1$d مزید</string>
     <string name="notification_messages_from_people">%2$d لوگوں سے %1$d پیغامات</string>
     <string name="notification_more_conversations">اور %1$d مزید گفتگو</string>
-    <string name="notification_active_peers_title">👥 قریب میں bitchatter!</string>
+    <string name="notification_active_peers_title">👥 قریب میں bluewhaleter!</string>
     <string name="notification_active_peers_one">قریب میں 1 شخص</string>
     <string name="notification_active_peers_many">قریب میں %1$d لوگ</string>
     <string name="notification_new_messages">نئے پیغامات</string>
@@ -57,8 +57,8 @@
     <string name="notification_new_activity_in">%1$s میں نئی سرگرمی</string>
     <string name="notification_messages_in">%1$s میں پیغامات</string>
     <string name="notification_joined_conversation">%1$s گفتگو میں شامل ہوا</string>
-    <string name="notification_geohash_summary_title_mentions">bitchat – %1$d ذکر</string>
-    <string name="notification_geohash_summary_title">bitchat – مقام چیٹس</string>
+    <string name="notification_geohash_summary_title_mentions">bluewhale – %1$d ذکر</string>
+    <string name="notification_geohash_summary_title">bluewhale – مقام چیٹس</string>
     <string name="notification_geohash_summary_text">%2$d مقامات سے %1$d پیغامات</string>
     <string name="notification_mesh_mention_title_singular">میش چیٹ میں ذکر</string>
     <string name="notification_mesh_mention_title_plural">میش چیٹ میں %1$d ذکر</string>
@@ -253,8 +253,8 @@
     <!-- آن بورڈنگ اسکرینز -->
     <string name="location_services_required">مقام کی خدمات ضروری</string>
     <string name="privacy_first">پرائیویسی پہلے</string>
-    <string name="location_explanation">bitchat آپ کا مقام ٹریک نہیں کرتا۔\n\nBluetooth اسکیننگ اور geohash چیٹ فیچر کے لیے مقام کی خدمات ضروری ہیں۔</string>
-    <string name="location_needs_for">bitchat کو مقام کی خدمات کی ضرورت:</string>
+    <string name="location_explanation">bluewhale آپ کا مقام ٹریک نہیں کرتا۔\n\nBluetooth اسکیننگ اور geohash چیٹ فیچر کے لیے مقام کی خدمات ضروری ہیں۔</string>
+    <string name="location_needs_for">bluewhale کو مقام کی خدمات کی ضرورت:</string>
     <string name="location_needs_bullets">• Bluetooth آلات اسکیننگ\n• میش نیٹ ورک میں قریبی صارفین کی دریافت\n• geohash چیٹ فیچر\n• کوئی ٹریکنگ یا مقام کا اجماع نہیں</string>
     <string name="open_location_settings">مقام سیٹنگز کھولیں</string>
     <string name="check_again">دوبارہ چیک کریں</string>
@@ -262,15 +262,15 @@
     <string name="location_unavailable_explanation">اس آلے پر مقام کی خدمات دستیاب نہیں ہیں۔ یہ غیر معمولی ہے کیونکہ مقام کی خدمات Android آلات پر معیاری ہیں۔\n\nBluetooth اسکیننگ (Android کی ضرورت) کے ٹھیک سے کام کرنے کے لیے مقام کی خدمات ضروری ہیں۔ اس کے بغیر ایپ قریبی صارفین کو دریافت نہیں کر سکتی۔</string>
     <string name="checking_location_services">مقام کی خدمات چیک کر رہے ہیں…</string>
     <string name="bluetooth_required">Bluetooth ضروری</string>
-    <string name="bluetooth_needs_for">bitchat کو Bluetooth کی ضرورت:</string>
+    <string name="bluetooth_needs_for">bluewhale کو Bluetooth کی ضرورت:</string>
     <string name="bluetooth_needs_bullets">• قریبی صارفین کی دریافت\n• میش نیٹ ورک کنیکشنز بنانا\n• پیغامات بھیجنا اور وصول کرنا\n• انٹرنیٹ یا سرورز کے بغیر کام کرنا</string>
     <string name="enable_bluetooth">Bluetooth فعال کریں</string>
     <string name="bluetooth_not_supported">Bluetooth تعاون یافتہ نہیں</string>
-    <string name="bluetooth_unsupported_explanation">یہ آلہ Bluetooth Low Energy (BLE) کو سپورٹ نہیں کرتا، جو bitchat کے کام کے لیے ضروری ہے۔\n\nBLE میش نیٹ ورکس بنانے اور انٹرنیٹ کے بغیر قریبی آلات کے ساتھ بات چیت کرنے کے لیے ضروری ہے۔</string>
+    <string name="bluetooth_unsupported_explanation">یہ آلہ Bluetooth Low Energy (BLE) کو سپورٹ نہیں کرتا، جو bluewhale کے کام کے لیے ضروری ہے۔\n\nBLE میش نیٹ ورکس بنانے اور انٹرنیٹ کے بغیر قریبی آلات کے ساتھ بات چیت کرنے کے لیے ضروری ہے۔</string>
     <string name="checking_bluetooth_status">Bluetooth کی کیفیت چیک کر رہے ہیں…</string>
     <string name="battery_optimization_detected_title">بیٹری کی اصلاح کا پتہ چلا</string>
     <string name="battery_optimization_enabled_title">بیٹری کی اصلاح فعال</string>
-    <string name="battery_optimization_explanation_short">میش کنیکشنز برقرار رکھنے کے لیے bitchat کو پس منظر میں چلنا ضروری ہے۔ بیٹری کی اصلاح ان کنیکشنز کو خراب کر سکتی ہے۔</string>
+    <string name="battery_optimization_explanation_short">میش کنیکشنز برقرار رکھنے کے لیے bluewhale کو پس منظر میں چلنا ضروری ہے۔ بیٹری کی اصلاح ان کنیکشنز کو خراب کر سکتی ہے۔</string>
     <string name="benefits_of_disabling">بند کرنے کے فوائد</string>
     <string name="battery_benefits_short">• قابل اعتماد پیغام کی ڈیلیوری\n• میش کنیکٹویٹی برقرار رکھنا\n• کنیکشن منقطع ہونے سے بچنا</string>
     <string name="disable_battery_optimization">بیٹری کی اصلاح بند کریں</string>
@@ -285,7 +285,7 @@
     <string name="privacy_bullets">• کوئی ٹریکنگ یا ڈیٹا اجماع نہیں\n• Bluetooth میش چیٹس مکمل آف لائن\n• geohash چیٹس انٹرنیٹ استعمال کرتے ہیں</string>
     <string name="permissions_header">اجازات</string>
     <string name="grant_permissions">اجازات دیں</string>
-    <string name="location_tracking_warning">bitchat آپ کا مقام ٹریک نہیں کرتا</string>
+    <string name="location_tracking_warning">bluewhale آپ کا مقام ٹریک نہیں کرتا</string>
     <string name="geohash_people_header">لوگ</string>
     <string name="nobody_around">یہاں کوئی نہیں…</string>
     <string name="you_suffix"> (آپ)</string>
@@ -314,14 +314,14 @@
     <string name="pow_label_format">pow: %1$dbit</string>
 
     <!-- اجازات کی تفصیل -->
-    <string name="perm_nearby_devices_desc">بلوٹوتھ کے ذریعے bitchat صارفین کی دریافت کے لیے ضروری</string>
-    <string name="perm_nearby_devices_system">bitchat کو قریبی آلات سے جڑنے کی اجازت دیں</string>
-    <string name="perm_location_desc">Android کی ضرورت: بلوٹوتھ کے ذریعے قریبی bitchat صارفین کی دریافت</string>
-    <string name="perm_location_system">قریبی آلات اسکین کرنے کے لیے bitchat کو یہ چاہیے</string>
+    <string name="perm_nearby_devices_desc">بلوٹوتھ کے ذریعے bluewhale صارفین کی دریافت کے لیے ضروری</string>
+    <string name="perm_nearby_devices_system">bluewhale کو قریبی آلات سے جڑنے کی اجازت دیں</string>
+    <string name="perm_location_desc">Android کی ضرورت: بلوٹوتھ کے ذریعے قریبی bluewhale صارفین کی دریافت</string>
+    <string name="perm_location_system">قریبی آلات اسکین کرنے کے لیے bluewhale کو یہ چاہیے</string>
     <string name="perm_notifications_desc">نجی پیغامات ملنے پر نوٹیفیکیشن حاصل کریں</string>
-    <string name="perm_notifications_system">bitchat کو آپ کو نوٹیفیکیشن بھیجنے کی اجازت دیں</string>
-    <string name="perm_battery_desc">یقینی بنانے کے لیے کہ bitchat پس منظر میں قابل اعتماد طور پر چلے اور میش کنیکشنز برقرار رکھے، بیٹری کی اصلاح بند کریں</string>
-    <string name="perm_battery_system">bitchat کو بیٹری کی پابندیوں کے بغیر چلنے کی اجازت دیں</string>
+    <string name="perm_notifications_system">bluewhale کو آپ کو نوٹیفیکیشن بھیجنے کی اجازت دیں</string>
+    <string name="perm_battery_desc">یقینی بنانے کے لیے کہ bluewhale پس منظر میں قابل اعتماد طور پر چلے اور میش کنیکشنز برقرار رکھے، بیٹری کی اصلاح بند کریں</string>
+    <string name="perm_battery_system">bluewhale کو بیٹری کی پابندیوں کے بغیر چلنے کی اجازت دیں</string>
 
     <!-- اجازات کی اقسام -->
     <string name="perm_type_nearby_devices">قریبی آلات</string>

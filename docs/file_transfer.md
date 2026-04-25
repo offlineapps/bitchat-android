@@ -1,6 +1,6 @@
-# Bitchat Bluetooth File Transfer: Images, Audio, and Generic Files (with Interactive Features)
+# Bluewhale Bluetooth File Transfer: Images, Audio, and Generic Files (with Interactive Features)
 
-This document is the exhaustive implementation guide for Bitchat’s Bluetooth file transfer protocol for voice notes (audio) and images, including interactive features like waveform seeking. It describes the on‑wire packet format (both v1 and v2), fragmentation/progress/cancellation, sender/receiver behaviors, and the complete UX we implemented in the Android client so that other implementers can interoperate and match the user experience precisely.
+This document is the exhaustive implementation guide for Bluewhale’s Bluetooth file transfer protocol for voice notes (audio) and images, including interactive features like waveform seeking. It describes the on‑wire packet format (both v1 and v2), fragmentation/progress/cancellation, sender/receiver behaviors, and the complete UX we implemented in the Android client so that other implementers can interoperate and match the user experience precisely.
 
 **Protocol Versions:**
 - **v1**: Original protocol with 2‑byte payload length (≤ 64 KiB files)
@@ -14,7 +14,7 @@ This document is the exhaustive implementation guide for Bitchat’s Bluetooth f
 
 The guide is organized into:
 
-- Protocol overview (BitchatPacket + File Transfer payload)
+- Protocol overview (BluewhalePacket + File Transfer payload)
 - Fragmentation, progress reporting, and cancellation
 - Receive path, validation, and persistence
 - Sender path (audio + images)
@@ -27,9 +27,9 @@ The guide is organized into:
 
 ## 1) Protocol Overview
 
-Bitchat BLE transport carries application messages inside the common `BitchatPacket` envelope. File transfer reuses the same envelope as public and private messages, with a distinct `type` and a TLV‑encoded payload.
+Bluewhale BLE transport carries application messages inside the common `BluewhalePacket` envelope. File transfer reuses the same envelope as public and private messages, with a distinct `type` and a TLV‑encoded payload.
 
-### 1.1 BitchatPacket envelope
+### 1.1 BluewhalePacket envelope
 
 Fields (subset relevant to file transfer):
 
@@ -44,9 +44,9 @@ Fields (subset relevant to file transfer):
 
 Envelope creation and broadcast paths are implemented in:
 
-- `app/src/main/java/com/bitchat/android/mesh/BluetoothMeshService.kt` (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/mesh/BluetoothMeshService.kt)
-- `app/src/main/java/com/bitchat/android/mesh/BluetoothConnectionManager.kt` (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/mesh/BluetoothConnectionManager.kt)
-- `app/src/main/java/com/bitchat/android/mesh/PacketProcessor.kt` (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/mesh/PacketProcessor.kt)
+- `app/src/main/java/com/bluewhale/android/mesh/BluetoothMeshService.kt` (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/mesh/BluetoothMeshService.kt)
+- `app/src/main/java/com/bluewhale/android/mesh/BluetoothConnectionManager.kt` (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/mesh/BluetoothConnectionManager.kt)
+- `app/src/main/java/com/bluewhale/android/mesh/PacketProcessor.kt` (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/mesh/PacketProcessor.kt)
 
 Private sends are additionally encrypted at the higher layer (Noise) for text messages, but file transfers use the `FILE_TRANSFER` message type in the clear at the envelope level with content carried inside a TLV. See code for any deployment‑specific enforcement.
 
@@ -91,11 +91,11 @@ PayloadLength: 4 bytes (big-endian, max ~4 GiB)
 - Clients sending file transfers should preferentially use v2 format.
 - Fragmentation still applies: large files are split into fragments that fit within BLE MTU constraints (~128 KiB per fragment).
 
-### 1.3 File Transfer TLV payload (BitchatFilePacket)
+### 1.3 File Transfer TLV payload (BluewhaleFilePacket)
 
 The file payload is a TLV structure with mixed length field sizes to support large contents efficiently.
 
-- Defined in `app/src/main/java/com/bitchat/android/model/BitchatFilePacket.kt` (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/model/BitchatFilePacket.kt)
+- Defined in `app/src/main/java/com/bluewhale/android/model/BluewhaleFilePacket.kt` (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/model/BluewhaleFilePacket.kt)
 
 Canonical TLVs (v2 spec):
 
@@ -170,10 +170,10 @@ Transfers are cancellable mid‑flight:
 
 Implementation files:
 
-- `app/src/main/java/com/bitchat/android/mesh/BluetoothPacketBroadcaster.kt` (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/mesh/BluetoothPacketBroadcaster.kt)
-- `app/src/main/java/com/bitchat/android/mesh/BluetoothConnectionManager.kt` (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/mesh/BluetoothConnectionManager.kt)
-- `app/src/main/java/com/bitchat/android/mesh/BluetoothMeshService.kt` (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/mesh/BluetoothMeshService.kt)
-- `app/src/main/java/com/bitchat/android/ui/ChatViewModel.kt` (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/ui/ChatViewModel.kt)
+- `app/src/main/java/com/bluewhale/android/mesh/BluetoothPacketBroadcaster.kt` (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/mesh/BluetoothPacketBroadcaster.kt)
+- `app/src/main/java/com/bluewhale/android/mesh/BluetoothConnectionManager.kt` (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/mesh/BluetoothConnectionManager.kt)
+- `app/src/main/java/com/bluewhale/android/mesh/BluetoothMeshService.kt` (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/mesh/BluetoothMeshService.kt)
+- `app/src/main/java/com/bluewhale/android/ui/ChatViewModel.kt` (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/ui/ChatViewModel.kt)
 
 
 ---
@@ -182,7 +182,7 @@ Implementation files:
 
 Receiver dispatch is in `MessageHandler`:
 
-- For both broadcast and private paths we try `BitchatFilePacket.decode(payload)`. If it decodes:
+- For both broadcast and private paths we try `BluewhaleFilePacket.decode(payload)`. If it decodes:
   - The file is persisted under app files with type‑specific subfolders:
     - Audio: `files/voicenotes/incoming/`
     - Image: `files/images/incoming/`
@@ -200,7 +200,7 @@ Receiver dispatch is in `MessageHandler`:
 
 Files:
 
-- `app/src/main/java/com/bitchat/android/mesh/MessageHandler.kt` (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/mesh/MessageHandler.kt)
+- `app/src/main/java/com/bluewhale/android/mesh/MessageHandler.kt` (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/mesh/MessageHandler.kt)
 
 
 ---
@@ -216,11 +216,11 @@ Files:
    - Files saved under `files/voicenotes/outgoing/voice_YYYYMMDD_HHMMSS.m4a`.
 
 2) Local echo
-   - We create a `BitchatMessage` with content `"[voice] <path>"` and add to the appropriate timeline (public/channel/private).
+   - We create a `BluewhaleMessage` with content `"[voice] <path>"` and add to the appropriate timeline (public/channel/private).
    - For private: `messageManager.addPrivateMessage(peerID, message)`. For public/channel: `messageManager.addMessage(message)` or add to channel.
 
 3) Packet creation
-   - Build a `BitchatFilePacket`:
+   - Build a `BluewhaleFilePacket`:
      - `fileName`: basename (e.g., `voice_… .m4a`)
      - `fileSize`: file length
      - `mimeType`: `audio/mp4`
@@ -238,11 +238,11 @@ Files:
 
 Core files:
 
-- `app/src/main/java/com/bitchat/android/ui/ChatViewModel.kt` (sendVoiceNote) (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/ui/ChatViewModel.kt)
-- `app/src/main/java/com/bitchat/android/model/BitchatFilePacket.kt` (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/model/BitchatFilePacket.kt)
-- `app/src/main/java/com/bitchat/android/mesh/BluetoothMeshService.kt` (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/mesh/BluetoothMeshService.kt)
-- `app/src/main/java/com/bitchat/android/features/voice/VoiceRecorder.kt` (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/features/voice/VoiceRecorder.kt)
-- `app/src/main/java/com/bitchat/android/features/voice/Waveform.kt` (cache + extractor) (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/features/voice/Waveform.kt)
+- `app/src/main/java/com/bluewhale/android/ui/ChatViewModel.kt` (sendVoiceNote) (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/ui/ChatViewModel.kt)
+- `app/src/main/java/com/bluewhale/android/model/BluewhaleFilePacket.kt` (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/model/BluewhaleFilePacket.kt)
+- `app/src/main/java/com/bluewhale/android/mesh/BluetoothMeshService.kt` (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/mesh/BluetoothMeshService.kt)
+- `app/src/main/java/com/bluewhale/android/features/voice/VoiceRecorder.kt` (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/features/voice/VoiceRecorder.kt)
+- `app/src/main/java/com/bluewhale/android/features/voice/Waveform.kt` (cache + extractor) (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/features/voice/Waveform.kt)
 
 ### 4.2 Images
 
@@ -255,7 +255,7 @@ Core files:
    - Insert a message with `"[image] <path>"` in the current context (public/channel/private).
 
 3) Packet creation
-   - Build `BitchatFilePacket` with mime `image/jpeg` and file content.
+   - Build `BluewhaleFilePacket` with mime `image/jpeg` and file content.
    - Encode TLV + compute `transferId` and map to `messageId`.
 
 4) Send
@@ -263,9 +263,9 @@ Core files:
 
 Core files:
 
-- `app/src/main/java/com/bitchat/android/features/media/ImageUtils.kt` (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/features/media/ImageUtils.kt)
-- `app/src/main/java/com/bitchat/android/ui/ChatViewModel.kt` (sendImageNote) (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/ui/ChatViewModel.kt)
-- `app/src/main/java/com/bitchat/android/mesh/BluetoothMeshService.kt` (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/mesh/BluetoothMeshService.kt)
+- `app/src/main/java/com/bluewhale/android/features/media/ImageUtils.kt` (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/features/media/ImageUtils.kt)
+- `app/src/main/java/com/bluewhale/android/ui/ChatViewModel.kt` (sendImageNote) (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/ui/ChatViewModel.kt)
+- `app/src/main/java/com/bluewhale/android/mesh/BluetoothMeshService.kt` (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/mesh/BluetoothMeshService.kt)
 
 
 ---
@@ -282,13 +282,13 @@ This section specifies exactly what users see and how inputs behave, so alternat
 
 Files:
 
-- `app/src/main/java/com/bitchat/android/ui/InputComponents.kt` (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/ui/InputComponents.kt)
+- `app/src/main/java/com/bluewhale/android/ui/InputComponents.kt` (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/ui/InputComponents.kt)
 
 ### 5.2 Recording UX
 
 - Hold the mic button to start recording. Recording runs until release, then we pad 500 ms and stop.
 - While recording, a dense, real‑time scrolling waveform overlays the input showing live audio; a timer is shown to the right.
-  - Component: `RealtimeScrollingWaveform` (dense bars, ~240 columns, ~20 FPS) in `app/src/main/java/com/bitchat/android/ui/media/RealtimeScrollingWaveform.kt`.
+  - Component: `RealtimeScrollingWaveform` (dense bars, ~240 columns, ~20 FPS) in `app/src/main/java/com/bluewhale/android/ui/media/RealtimeScrollingWaveform.kt`.
   - The keyboard stays visible; the caret is hidden.
 - On release, we immediately show a local echo message for the voice note and start sending.
 
@@ -306,9 +306,9 @@ Files:
 
 Files:
 
-- `app/src/main/java/com/bitchat/android/ui/MessageComponents.kt` (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/ui/MessageComponents.kt)
-- `app/src/main/java/com/bitchat/android/ui/media/WaveformViews.kt` (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/ui/media/WaveformViews.kt)
-- `app/src/main/java/com/bitchat/android/features/voice/Waveform.kt` (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/features/voice/Waveform.kt)
+- `app/src/main/java/com/bluewhale/android/ui/MessageComponents.kt` (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/ui/MessageComponents.kt)
+- `app/src/main/java/com/bluewhale/android/ui/media/WaveformViews.kt` (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/ui/media/WaveformViews.kt)
+- `app/src/main/java/com/bluewhale/android/features/voice/Waveform.kt` (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/features/voice/Waveform.kt)
 
 ### 5.4 Image sending UX
 
@@ -321,10 +321,10 @@ Files:
 
 Files:
 
-- `app/src/main/java/com/bitchat/android/ui/media/ImagePickerButton.kt` (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/ui/media/ImagePickerButton.kt)
-- `app/src/main/java/com/bitchat/android/features/media/ImageUtils.kt` (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/features/media/ImageUtils.kt)
-- `app/src/main/java/com/bitchat/android/ui/media/BlockRevealImage.kt` (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/ui/media/BlockRevealImage.kt)
-- `app/src/main/java/com/bitchat/android/ui/MessageComponents.kt` (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/ui/MessageComponents.kt)
+- `app/src/main/java/com/bluewhale/android/ui/media/ImagePickerButton.kt` (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/ui/media/ImagePickerButton.kt)
+- `app/src/main/java/com/bluewhale/android/features/media/ImageUtils.kt` (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/features/media/ImageUtils.kt)
+- `app/src/main/java/com/bluewhale/android/ui/media/BlockRevealImage.kt` (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/ui/media/BlockRevealImage.kt)
+- `app/src/main/java/com/bluewhale/android/ui/MessageComponents.kt` (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/ui/MessageComponents.kt)
 
 ### 5.5 Image receiving UX
 
@@ -333,7 +333,7 @@ Files:
 
 Files:
 
-- `app/src/main/java/com/bitchat/android/ui/media/FullScreenImageViewer.kt` (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/ui/media/FullScreenImageViewer.kt)
+- `app/src/main/java/com/bluewhale/android/ui/media/FullScreenImageViewer.kt` (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/ui/media/FullScreenImageViewer.kt)
 
 
 ---
@@ -362,8 +362,8 @@ VoiceNotePlayer Seeking:
 - Updates progress state immediately for UI responsiveness even before playback reaches the new position.
 
 Files:
-- `app/src/main/java/com/bitchat/android/ui/MessageComponents.kt` (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/ui/MessageComponents.kt) — VoiceNotePlayer with seekTo function
-- `app/src/main/java/com/bitchat/android/ui/media/WaveformViews.kt` (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/ui/media/WaveformViews.kt) — Interactive WaveformCanvas with tap handling
+- `app/src/main/java/com/bluewhale/android/ui/MessageComponents.kt` (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/ui/MessageComponents.kt) — VoiceNotePlayer with seekTo function
+- `app/src/main/java/com/bluewhale/android/ui/media/WaveformViews.kt` (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/ui/media/WaveformViews.kt) — Interactive WaveformCanvas with tap handling
 
 ---
 
@@ -383,38 +383,38 @@ Files:
 
 Core protocol and transport:
 
-- `app/src/main/java/com/bitchat/android/model/BitchatFilePacket.kt` — TLV payload model + encode/decode. (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/model/BitchatFilePacket.kt)
-- `app/src/main/java/com/bitchat/android/mesh/BluetoothMeshService.kt` — packet creation and broadcast for file messages. (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/mesh/BluetoothMeshService.kt)
-- `app/src/main/java/com/bitchat/android/mesh/BluetoothPacketBroadcaster.kt` — fragmentation, progress, cancellation via transfer jobs. (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/mesh/BluetoothPacketBroadcaster.kt)
-- `app/src/main/java/com/bitchat/android/mesh/TransferProgressManager.kt` — progress events bus. (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/mesh/TransferProgressManager.kt)
-- `app/src/main/java/com/bitchat/android/mesh/MessageHandler.kt` — receive path: decode, persist to files, create chat messages. (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/mesh/MessageHandler.kt)
+- `app/src/main/java/com/bluewhale/android/model/BluewhaleFilePacket.kt` — TLV payload model + encode/decode. (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/model/BluewhaleFilePacket.kt)
+- `app/src/main/java/com/bluewhale/android/mesh/BluetoothMeshService.kt` — packet creation and broadcast for file messages. (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/mesh/BluetoothMeshService.kt)
+- `app/src/main/java/com/bluewhale/android/mesh/BluetoothPacketBroadcaster.kt` — fragmentation, progress, cancellation via transfer jobs. (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/mesh/BluetoothPacketBroadcaster.kt)
+- `app/src/main/java/com/bluewhale/android/mesh/TransferProgressManager.kt` — progress events bus. (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/mesh/TransferProgressManager.kt)
+- `app/src/main/java/com/bluewhale/android/mesh/MessageHandler.kt` — receive path: decode, persist to files, create chat messages. (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/mesh/MessageHandler.kt)
 
 Audio capture and waveform:
 
-- `app/src/main/java/com/bitchat/android/features/voice/VoiceRecorder.kt` — MediaRecorder wrapper. (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/features/voice/VoiceRecorder.kt)
-- `app/src/main/java/com/bitchat/android/features/voice/Waveform.kt` — cache + extractor + resampler. (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/features/voice/Waveform.kt)
-- `app/src/main/java/com/bitchat/android/ui/media/WaveformViews.kt` — Compose waveform preview components. (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/ui/media/WaveformViews.kt)
+- `app/src/main/java/com/bluewhale/android/features/voice/VoiceRecorder.kt` — MediaRecorder wrapper. (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/features/voice/VoiceRecorder.kt)
+- `app/src/main/java/com/bluewhale/android/features/voice/Waveform.kt` — cache + extractor + resampler. (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/features/voice/Waveform.kt)
+- `app/src/main/java/com/bluewhale/android/ui/media/WaveformViews.kt` — Compose waveform preview components. (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/ui/media/WaveformViews.kt)
 
 Image pipeline:
 
-- `app/src/main/java/com/bitchat/android/features/media/ImageUtils.kt` — downscale and save to app files. (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/features/media/ImageUtils.kt)
-- `app/src/main/java/com/bitchat/android/ui/media/ImagePickerButton.kt` — SAF picker button. (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/ui/media/ImagePickerButton.kt)
-- `app/src/main/java/com/bitchat/android/ui/media/BlockRevealImage.kt` — block‑reveal progress renderer (no gaps, dense grid). (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/ui/media/BlockRevealImage.kt)
+- `app/src/main/java/com/bluewhale/android/features/media/ImageUtils.kt` — downscale and save to app files. (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/features/media/ImageUtils.kt)
+- `app/src/main/java/com/bluewhale/android/ui/media/ImagePickerButton.kt` — SAF picker button. (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/ui/media/ImagePickerButton.kt)
+- `app/src/main/java/com/bluewhale/android/ui/media/BlockRevealImage.kt` — block‑reveal progress renderer (no gaps, dense grid). (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/ui/media/BlockRevealImage.kt)
 
 Recording overlay:
 
-- `app/src/main/java/com/bitchat/android/ui/media/RealtimeScrollingWaveform.kt` — dense, real‑time scrolling waveform during recording. (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/ui/media/RealtimeScrollingWaveform.kt)
+- `app/src/main/java/com/bluewhale/android/ui/media/RealtimeScrollingWaveform.kt` — dense, real‑time scrolling waveform during recording. (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/ui/media/RealtimeScrollingWaveform.kt)
 
 UI composition and view model coordination:
 
-- `app/src/main/java/com/bitchat/android/ui/InputComponents.kt` — input field, overlays (recording), picker button, mic. (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/ui/InputComponents.kt)
-- `app/src/main/java/com/bitchat/android/ui/MessageComponents.kt` — message rendering for text/audio/images including progress UIs and cancel overlays. (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/ui/MessageComponents.kt)
-- `app/src/main/java/com/bitchat/android/ui/ChatViewModel.kt` — sendVoiceNote/sendImageNote, progress mapping, cancelMediaSend. (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/ui/ChatViewModel.kt)
-- `app/src/main/java/com/bitchat/android/ui/MessageManager.kt` — add/remove/update messages across main, private, and channels. (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/ui/MessageManager.kt)
+- `app/src/main/java/com/bluewhale/android/ui/InputComponents.kt` — input field, overlays (recording), picker button, mic. (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/ui/InputComponents.kt)
+- `app/src/main/java/com/bluewhale/android/ui/MessageComponents.kt` — message rendering for text/audio/images including progress UIs and cancel overlays. (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/ui/MessageComponents.kt)
+- `app/src/main/java/com/bluewhale/android/ui/ChatViewModel.kt` — sendVoiceNote/sendImageNote, progress mapping, cancelMediaSend. (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/ui/ChatViewModel.kt)
+- `app/src/main/java/com/bluewhale/android/ui/MessageManager.kt` — add/remove/update messages across main, private, and channels. (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/ui/MessageManager.kt)
 
 Fullscreen image:
 
-- `app/src/main/java/com/bitchat/android/ui/media/FullScreenImageViewer.kt` — fullscreen viewer + save to Downloads. (/Users/cc/git/bitchat-android/app/src/main/java/com/bitchat/android/ui/media/FullScreenImageViewer.kt)
+- `app/src/main/java/com/bluewhale/android/ui/media/FullScreenImageViewer.kt` — fullscreen viewer + save to Downloads. (/Users/cc/git/bluewhale-android/app/src/main/java/com/bluewhale/android/ui/media/FullScreenImageViewer.kt)
 
 
 ---
@@ -422,11 +422,11 @@ Fullscreen image:
 ## 8) Implementation Checklist for Other Clients
 
 1. **Implement v2 protocol support**: Support both v1 (2-byte payload length) and v2 (4-byte payload length) packet decoding. Use v2 format for file transfer packets to enable large file transfers.
-2. Implement `BitchatFilePacket` TLV exactly as specified:
+2. Implement `BluewhaleFilePacket` TLV exactly as specified:
    - FILE_NAME and MIME_TYPE: `type(1) + len(2) + value`
    - FILE_SIZE: `type(1) + len(2=4) + value(4, UInt32 BE)`
    - CONTENT: `type(1) + len(4) + value`
-3. Embed the TLV into a `BitchatPacket` envelope with `type = FILE_TRANSFER (0x22)` and the correct `recipientID` (broadcast vs private).
+3. Embed the TLV into a `BluewhalePacket` envelope with `type = FILE_TRANSFER (0x22)` and the correct `recipientID` (broadcast vs private).
 4. Fragment, send, and report progress using a transfer ID derived from `sha256(payload)` so the UI can map progress to a message.
 5. Support cancellation at the fragment sender: stop sending remaining fragments and propagate a cancel to the UI (we remove the message).
 6. On receive, decode TLV, persist to an app directory (separate audio/images/other), and create a chat message with content marker `"[voice] path"`, `"[image] path"`, or `"[file] path"` for local rendering.

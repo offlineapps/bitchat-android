@@ -12,7 +12,7 @@ This change introduces a lean DeviceMonitoringManager to strictly manage BLE dev
 
 ## Implementation Overview
 
-File: `app/src/main/java/com/bitchat/android/mesh/DeviceMonitoringManager.kt`
+File: `app/src/main/java/com/bluewhale/android/mesh/DeviceMonitoringManager.kt`
 
 - Thread-safe maps with coroutine-based timers.
 - Minimal surface area: a few clearly named entry points to hook into existing flows.

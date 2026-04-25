@@ -1,12 +1,12 @@
 # Announcement Gossip TLV (Direct Neighbors)
 
-This document specifies an optional TLV extension to the BitChat `ANNOUNCE` message that allows peers to gossip which other peers they are currently connected to directly over Bluetooth. Implementations can use this to build a mesh topology view (nodes = peers, edges = direct connections).
+This document specifies an optional TLV extension to the Bluewhale `ANNOUNCE` message that allows peers to gossip which other peers they are currently connected to directly over Bluetooth. Implementations can use this to build a mesh topology view (nodes = peers, edges = direct connections).
 
 Status: optional and backward-compatible.
 
 ## Layering Overview
 
-- Outer packet: BitChat binary packet with `type = 0x01` (ANNOUNCE). Header is unchanged.
+- Outer packet: Bluewhale binary packet with `type = 0x01` (ANNOUNCE). Header is unchanged.
 - Payload: A sequence of TLVs. Unknown TLVs MUST be ignored for forward compatibility.
 - Signature: The packet MAY be signed using the Ed25519 public key carried in TLV `0x03`. The gossip TLV (if present) is part of the payload and therefore covered by the signature.
 
@@ -36,7 +36,7 @@ Peer IDs are represented as 8 raw bytes (16 hex chars) in “network order” (l
 - Convert each 2 hex chars to 1 byte from left to right.
 - If fewer than 16 hex chars are available, pad the remaining bytes with `0x00` at the end to reach 8 bytes.
 
-This matches the on‑wire 8‑byte `senderID`/`recipientID` encoding used in the BitChat packet header.
+This matches the on‑wire 8‑byte `senderID`/`recipientID` encoding used in the Bluewhale packet header.
 
 ## Sender Behavior
 
@@ -59,7 +59,7 @@ This matches the on‑wire 8‑byte `senderID`/`recipientID` encoding used in th
   - De‑duplicate neighbors.
 - Topology maintenance guidance (optional, but recommended for consistent behavior):
   - Maintain, for each announcing peer A, the last announcement timestamp and the neighbor list from TLV `0x04`.
-  - When a newer announcement from A arrives (use the 8‑byte unsigned `timestamp` in the BitChat packet header), replace A’s previously recorded neighbor list with the new one. If older or equal, ignore the neighbor update.
+  - When a newer announcement from A arrives (use the 8‑byte unsigned `timestamp` in the Bluewhale packet header), replace A’s previously recorded neighbor list with the new one. If older or equal, ignore the neighbor update.
   - Treat the neighbor list as a set of undirected edges `{A, B}` in your topology visualization; i.e., if A reports direct peers `[B, C]`, add edges A–B and A–C.
 
 ## Limits and Compatibility

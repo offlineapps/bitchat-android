@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">bitchat</string>
+    <string name="app_name">bluewhale</string>
 
     <!-- अनुमति कारणहरू -->
     <string name="permission_bluetooth_rationale">इन्टरनेट बिना प्रत्यक्ष कुराकानीका लागि ब्लुटुथ अनुमति आवश्यक हुन्छ।</string>
@@ -29,12 +29,12 @@
     <string name="battery_optimization_not_required">ब्याट्री अनुकूलन आवश्यक छैन</string>
     <string name="battery_optimization_checking">ब्याट्री अनुकूलन जाँचिँदै</string>
     <string name="battery_optimization_why_disable">ब्याट्री अनुकूलन किन बन्द गर्ने?</string>
-    <string name="battery_optimization_explanation">bitchat पछाडिबाट चल्छ ताकि नजिकका यन्त्रहरूसँग मेष जडान कायम रहोस्। ब्याट्री अनुकूलनले यी जडान विच्छेद गराउन सक्छ, जसले सन्देश ढिलो वा हराउन सक्छ।\n\nअनुकूलन बन्द गर्दा भरपर्दो peer‑to‑peer सन्देश सुनिश्चित हुन्छ।</string>
+    <string name="battery_optimization_explanation">bluewhale पछाडिबाट चल्छ ताकि नजिकका यन्त्रहरूसँग मेष जडान कायम रहोस्। ब्याट्री अनुकूलनले यी जडान विच्छेद गराउन सक्छ, जसले सन्देश ढिलो वा हराउन सक्छ।\n\nअनुकूलन बन्द गर्दा भरपर्दो peer‑to‑peer सन्देश सुनिश्चित हुन्छ।</string>
     <string name="battery_optimization_disable_button">ब्याट्री अनुकूलन बन्द गर्नुहोस्</string>
-    <string name="battery_optimization_note">नोट: यो सेटिङ पछि Android सेटिङहरू &gt; Apps &gt; bitchat &gt; Battery मा परिवर्तन गर्न सकिन्छ।</string>
-    <string name="battery_optimization_not_supported_explanation">तपाईंको यन्त्रलाई ब्याट्री अनुकूलन सेटिङ आवश्यक छैन। bitchat सामान्य रूपमा चल्नेछ।</string>
-    <string name="battery_optimization_not_supported_message">तपाईंको यन्त्रलाई ब्याट्री अनुकूलन सेटिङ आवश्यक छैन। bitchat सामान्य रूपमा चल्नेछ।</string>
-    <string name="battery_optimization_success_message">bitchat पछाडिबाट भरपर्दो रूपमा चल्न सक्छ</string>
+    <string name="battery_optimization_note">नोट: यो सेटिङ पछि Android सेटिङहरू &gt; Apps &gt; bluewhale &gt; Battery मा परिवर्तन गर्न सकिन्छ।</string>
+    <string name="battery_optimization_not_supported_explanation">तपाईंको यन्त्रलाई ब्याट्री अनुकूलन सेटिङ आवश्यक छैन। bluewhale सामान्य रूपमा चल्नेछ।</string>
+    <string name="battery_optimization_not_supported_message">तपाईंको यन्त्रलाई ब्याट्री अनुकूलन सेटिङ आवश्यक छैन। bluewhale सामान्य रूपमा चल्नेछ।</string>
+    <string name="battery_optimization_success_message">bluewhale पछाडिबाट भरपर्दो रूपमा चल्न सक्छ</string>
     <string name="battery_optimization_benefits">• सन्देश विश्वसनीय डेलिभरी\n• मेष जडान कायम राख्ने\n• पृष्ठभूमिमा रिले\n• जडान विच्छेद हुन नदिने</string>
     <string name="battery_optimization_check_again">फेरि जाँच्नुहोस्</string>
     <string name="battery_optimization_skip">अहिलेलाई बेवास्ता गर्नुहोस्</string>
@@ -46,7 +46,7 @@
     <string name="notification_summary_more">र %1$d थप</string>
     <string name="notification_messages_from_people">%1$d सन्देश %2$d जनाबाट</string>
     <string name="notification_more_conversations">र %1$d अरू कुराकानी</string>
-    <string name="notification_active_peers_title">👥 नजिकै bitchatter हरू!</string>
+    <string name="notification_active_peers_title">👥 नजिकै bluewhaleter हरू!</string>
     <string name="notification_active_peers_one">१ जना नजिकै</string>
     <string name="notification_active_peers_many">%1$d जना नजिकै</string>
     <string name="notification_new_messages">नयाँ सन्देश</string>
@@ -57,8 +57,8 @@
     <string name="notification_new_activity_in">%1$s मा नयाँ गतिविधि</string>
     <string name="notification_messages_in">%1$s मा सन्देश</string>
     <string name="notification_joined_conversation">%1$s वार्तालापमा सामेल भयो</string>
-    <string name="notification_geohash_summary_title_mentions">bitchat – %1$d उल्लेख</string>
-    <string name="notification_geohash_summary_title">bitchat – स्थान च्याट</string>
+    <string name="notification_geohash_summary_title_mentions">bluewhale – %1$d उल्लेख</string>
+    <string name="notification_geohash_summary_title">bluewhale – स्थान च्याट</string>
     <string name="notification_geohash_summary_text">%2$d स्थानबाट %1$d सन्देश</string>
     <string name="notification_mesh_mention_title_singular">मेष च्याटमा उल्लेख</string>
     <string name="notification_mesh_mention_title_plural">मेष च्याटमा %1$d उल्लेख</string>
@@ -244,8 +244,8 @@
     <!-- अनबोर्डिङ स्क्रिन -->
     <string name="location_services_required">स्थान सेवाहरू आवश्यक</string>
     <string name="privacy_first">गोपनीयता पहिलो</string>
-    <string name="location_explanation">bitchat ले तपाईंको स्थान पछ्याउँदैन।\n\nब्लुटुथ स्क्यान र Geohash च्याट सुविधा लागि स्थान सेवा आवश्यक छन्।</string>
-    <string name="location_needs_for">bitchat लाई स्थान सेवा आवश्यक पर्छ:</string>
+    <string name="location_explanation">bluewhale ले तपाईंको स्थान पछ्याउँदैन।\n\nब्लुटुथ स्क्यान र Geohash च्याट सुविधा लागि स्थान सेवा आवश्यक छन्।</string>
+    <string name="location_needs_for">bluewhale लाई स्थान सेवा आवश्यक पर्छ:</string>
     <string name="location_needs_bullets">• ब्लुटुथ यन्त्र स्क्यान\n• मेष सञ्जालमा नजिकका प्रयोगकर्ता पत्ता लगाउने\n• Geohash च्याट सुविधा\n• कुनै ट्र्याकिङ वा स्थान सङ्कलन छैन</string>
     <string name="open_location_settings">स्थान सेटिङ खोल्नुहोस्</string>
     <string name="check_again">फेरि जाँच्नुहोस्</string>
@@ -253,15 +253,15 @@
     <string name="location_unavailable_explanation">यस यन्त्रमा स्थान सेवाहरू उपलब्ध छैनन्। यो असामान्य हो किनकि Android यन्त्रमा यो मानक हो।\n\nब्लुटुथ स्क्यान ठीकसँग चल्न (Android को आवश्यक) स्थान सेवा चाहिन्छ। अन्यथा नजिकका प्रयोगकर्ता पत्ता लाग्दैनन्।</string>
     <string name="checking_location_services">स्थान सेवाहरू जाँचिँदै…</string>
     <string name="bluetooth_required">ब्लुटुथ आवश्यक</string>
-    <string name="bluetooth_needs_for">bitchat लाई ब्लुटुथ आवश्यक छ:</string>
+    <string name="bluetooth_needs_for">bluewhale लाई ब्लुटुथ आवश्यक छ:</string>
     <string name="bluetooth_needs_bullets">• नजिकका प्रयोगकर्ता पत्ता लगाउने\n• मेष जडान बनाउने\n• सन्देश पठाउने/प्राप्त गर्ने\n• इन्टरनेट वा सर्भर बिना काम गर्ने</string>
     <string name="enable_bluetooth">ब्लुटुथ सक्षम गर्नुहोस्</string>
     <string name="bluetooth_not_supported">ब्लुटुथ समर्थित छैन</string>
-    <string name="bluetooth_unsupported_explanation">यो यन्त्रले Bluetooth Low Energy (BLE) समर्थन गर्दैन, जुन bitchat को लागि आवश्यक छ।\n\nनजिकका यन्त्रहरूसँग इन्टरनेट बिना सञ्चार गर्न र मेष बनाउन BLE चाहिन्छ।</string>
+    <string name="bluetooth_unsupported_explanation">यो यन्त्रले Bluetooth Low Energy (BLE) समर्थन गर्दैन, जुन bluewhale को लागि आवश्यक छ।\n\nनजिकका यन्त्रहरूसँग इन्टरनेट बिना सञ्चार गर्न र मेष बनाउन BLE चाहिन्छ।</string>
     <string name="checking_bluetooth_status">ब्लुटुथ स्थिति जाँचिँदै…</string>
     <string name="battery_optimization_detected_title">ब्याट्री अनुकूलन भेटियो</string>
     <string name="battery_optimization_enabled_title">ब्याट्री अनुकूलन सक्षम</string>
-    <string name="battery_optimization_explanation_short">मेष जडान कायम राख्न bitchat पछाडिबाट चल्नुपर्छ। ब्याट्री अनुकूलनले जडान काट्न सक्छ।</string>
+    <string name="battery_optimization_explanation_short">मेष जडान कायम राख्न bluewhale पछाडिबाट चल्नुपर्छ। ब्याट्री अनुकूलनले जडान काट्न सक्छ।</string>
     <string name="benefits_of_disabling">बन्द गर्ने फाइदाहरू</string>
     <string name="battery_benefits_short">• भरपर्दो डेलिभरी\n• मेष कन्नेक्टिभिटी कायम\n• विच्छेद रोक्छ</string>
     <string name="disable_battery_optimization">अनुकूलन बन्द गर्नुहोस्</string>
@@ -278,9 +278,9 @@
     <string name="privacy_bullets">• कुनै ट्र्याकिङ वा डेटा सङ्कलन छैन\n• ब्लुटुथ मेष च्याट पूर्णतया अफलाइन\n• Geohash च्याट इन्टरनेट प्रयोग गर्छ</string>
     <string name="permissions_header">अनुमति</string>
     <string name="grant_permissions">अनुमति दिनुहोस्</string>
-    <string name="location_tracking_warning">bitchat ले तपाईंको स्थान पछ्याउँदैन</string>
+    <string name="location_tracking_warning">bluewhale ले तपाईंको स्थान पछ्याउँदैन</string>
     <string name="at_symbol">@</string>
-    <string name="app_brand">bitchat/</string>
+    <string name="app_brand">bluewhale/</string>
     <string name="channel_count_prefix"> · ⧉ </string>
     <string name="geohash_people_header">मानिसहरू</string>
     <string name="nobody_around">वरिपरि कोही छैन…</string>
@@ -327,13 +327,13 @@
     <string name="cd_pause_voice">पज</string>
 
     <!-- अनुमति विवरण -->
-    <string name="perm_nearby_devices_desc">ब्लुटुथमार्फत bitchat प्रयोगकर्ता फेला पार्न आवश्यक</string>
-    <string name="perm_nearby_devices_system">bitchat लाई नजिकका यन्त्र जडान गर्न अनुमति दिनुहोस्</string>
+    <string name="perm_nearby_devices_desc">ब्लुटुथमार्फत bluewhale प्रयोगकर्ता फेला पार्न आवश्यक</string>
+    <string name="perm_nearby_devices_system">bluewhale लाई नजिकका यन्त्र जडान गर्न अनुमति दिनुहोस्</string>
     <string name="perm_location_desc">Android अनुसार ब्लुटुथमार्फत नजिकका प्रयोगकर्ता फेला पार्न आवश्यक</string>
-    <string name="perm_location_system">नजिकका यन्त्र स्क्यान गर्न bitchat लाई आवश्यक</string>
+    <string name="perm_location_system">नजिकका यन्त्र स्क्यान गर्न bluewhale लाई आवश्यक</string>
     <string name="perm_notifications_desc">निजी सन्देश आउँदा सूचना पाउनुहोस्</string>
-    <string name="perm_notifications_system">bitchat लाई तपाईंलाई सूचना पठाउन दिनुहोस्</string>
-    <string name="perm_battery_desc">bitchat लाई पछाडिबाट भरपर्दो रूपमा चलाउन र मेष जडान कायम राख्न ब्याट्री अनुकूलन बन्द गर्नुहोस्</string>
+    <string name="perm_notifications_system">bluewhale लाई तपाईंलाई सूचना पठाउन दिनुहोस्</string>
+    <string name="perm_battery_desc">bluewhale लाई पछाडिबाट भरपर्दो रूपमा चलाउन र मेष जडान कायम राख्न ब्याट्री अनुकूलन बन्द गर्नुहोस्</string>
     <string name="perm_battery_system">ब्याट्री प्रतिबन्ध बिना चल्न अनुमति दिनुहोस्</string>
 
     <!-- अनुमति प्रकार -->

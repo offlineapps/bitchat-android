@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">bitchat</string>
+    <string name="app_name">bluewhale</string>
 
     <!-- Mga dahilan ng permiso -->
     <string name="permission_bluetooth_rationale">Kailangan ang permiso sa Bluetooth para sa direktang pag‑usap kahit walang internet.</string>
@@ -29,12 +29,12 @@
     <string name="battery_optimization_not_required">Hindi kailangan ang pag‑optimize ng baterya</string>
     <string name="battery_optimization_checking">Sinusuri ang pag‑optimize ng baterya</string>
     <string name="battery_optimization_why_disable">Bakit i‑disable ang pag‑optimize?</string>
-    <string name="battery_optimization_explanation">Tumatakbo ang bitchat sa background upang mapanatili ang mesh na koneksyon sa mga kalapit na device. Maaaring maputol ito ng pag‑optimize ng baterya na nagdudulot ng pagkaantala o pagkawala ng mensahe.\n\nAng pag‑disable nito ay tinitiyak ang maaasahang peer‑to‑peer na pagmemensahe.</string>
+    <string name="battery_optimization_explanation">Tumatakbo ang bluewhale sa background upang mapanatili ang mesh na koneksyon sa mga kalapit na device. Maaaring maputol ito ng pag‑optimize ng baterya na nagdudulot ng pagkaantala o pagkawala ng mensahe.\n\nAng pag‑disable nito ay tinitiyak ang maaasahang peer‑to‑peer na pagmemensahe.</string>
     <string name="battery_optimization_disable_button">I‑disable ang pag‑optimize</string>
-    <string name="battery_optimization_note">Tandaan: Maaari itong baguhin sa Android Settings &gt; Apps &gt; bitchat &gt; Battery</string>
-    <string name="battery_optimization_not_supported_explanation">Hindi kailangan ng iyong device ng mga setting ng pag‑optimize ng baterya. Normal na gagana ang bitchat.</string>
-    <string name="battery_optimization_not_supported_message">Hindi kailangan ng iyong device ng mga setting ng pag‑optimize ng baterya. Normal na gagana ang bitchat.</string>
-    <string name="battery_optimization_success_message">Maaasahang tatakbo ang bitchat sa background</string>
+    <string name="battery_optimization_note">Tandaan: Maaari itong baguhin sa Android Settings &gt; Apps &gt; bluewhale &gt; Battery</string>
+    <string name="battery_optimization_not_supported_explanation">Hindi kailangan ng iyong device ng mga setting ng pag‑optimize ng baterya. Normal na gagana ang bluewhale.</string>
+    <string name="battery_optimization_not_supported_message">Hindi kailangan ng iyong device ng mga setting ng pag‑optimize ng baterya. Normal na gagana ang bluewhale.</string>
+    <string name="battery_optimization_success_message">Maaasahang tatakbo ang bluewhale sa background</string>
     <string name="battery_optimization_benefits">• Maaasahang paghatid ng mensahe\n• Pinananatili ang mesh na koneksyon\n• Background relay ng mensahe\n• Iwas putol ng koneksyon</string>
     <string name="battery_optimization_check_again">Suriin muli</string>
     <string name="battery_optimization_skip">Laktawan muna</string>
@@ -46,7 +46,7 @@
     <string name="notification_summary_more">at %1$d pa</string>
     <string name="notification_messages_from_people">%1$d mensahe mula sa %2$d tao</string>
     <string name="notification_more_conversations">at %1$d pang usapan</string>
-    <string name="notification_active_peers_title">👥 mga bitchatter na malapit!</string>
+    <string name="notification_active_peers_title">👥 mga bluewhaleter na malapit!</string>
     <string name="notification_active_peers_one">1 tao sa paligid</string>
     <string name="notification_active_peers_many">%1$d tao sa paligid</string>
     <string name="notification_new_messages">Mga bagong mensahe</string>
@@ -57,8 +57,8 @@
     <string name="notification_new_activity_in">Bagong aktibidad sa %1$s</string>
     <string name="notification_messages_in">Mga mensahe sa %1$s</string>
     <string name="notification_joined_conversation">Sumali si %1$s sa usapan</string>
-    <string name="notification_geohash_summary_title_mentions">bitchat – %1$d banggit</string>
-    <string name="notification_geohash_summary_title">bitchat – mga chat sa lokasyon</string>
+    <string name="notification_geohash_summary_title_mentions">bluewhale – %1$d banggit</string>
+    <string name="notification_geohash_summary_title">bluewhale – mga chat sa lokasyon</string>
     <string name="notification_geohash_summary_text">%1$d mensahe mula sa %2$d lokasyon</string>
     <string name="notification_mesh_mention_title_singular">Nabanggit sa Mesh Chat</string>
     <string name="notification_mesh_mention_title_plural">%1$d banggit sa Mesh Chat</string>
@@ -244,8 +244,8 @@
     <!-- Onboarding screens -->
     <string name="location_services_required">Kailangang‑kailangan ang Location Services</string>
     <string name="privacy_first">Privacy muna</string>
-    <string name="location_explanation">HINDI sinusubaybayan ng bitchat ang iyong lokasyon.\n\nKailangan ang location services para sa Bluetooth scanning at Geohash chat.</string>
-    <string name="location_needs_for">Kailangan ng bitchat ang location services para sa:</string>
+    <string name="location_explanation">HINDI sinusubaybayan ng bluewhale ang iyong lokasyon.\n\nKailangan ang location services para sa Bluetooth scanning at Geohash chat.</string>
+    <string name="location_needs_for">Kailangan ng bluewhale ang location services para sa:</string>
     <string name="location_needs_bullets">• Bluetooth device scanning\n• Pagtuklas ng kalapit na user sa mesh\n• Geohash chat\n• Walang tracking o koleksiyon ng lokasyon</string>
     <string name="open_location_settings">Buksan ang Location Settings</string>
     <string name="check_again">Suriin muli</string>
@@ -253,15 +253,15 @@
     <string name="location_unavailable_explanation">Hindi available ang location services sa device na ito. Hindi ito karaniwan dahil standard ito sa Android.\n\nKailangan ito para maayos ang Bluetooth scanning. Kung wala ito, hindi matutuklasan ang mga kalapit na user.</string>
     <string name="checking_location_services">Sinusuri ang location services…</string>
     <string name="bluetooth_required">Kailangan ang Bluetooth</string>
-    <string name="bluetooth_needs_for">Kailangan ng bitchat ang Bluetooth para sa:</string>
+    <string name="bluetooth_needs_for">Kailangan ng bluewhale ang Bluetooth para sa:</string>
     <string name="bluetooth_needs_bullets">• Tuklasin ang mga kalapit na user\n• Gumawa ng mesh na koneksyon\n• Magpadala at tumanggap ng mensahe\n• Gumana kahit walang internet o server</string>
     <string name="enable_bluetooth">I‑enable ang Bluetooth</string>
     <string name="bluetooth_not_supported">Hindi suportado ang Bluetooth</string>
-    <string name="bluetooth_unsupported_explanation">Hindi sinusuportahan ng device na ito ang Bluetooth Low Energy (BLE) na kailangan para gumana ang bitchat.\n\nKailangan ang BLE para bumuo ng mesh at makipag‑ugnayan sa kalapit na device kahit walang internet.</string>
+    <string name="bluetooth_unsupported_explanation">Hindi sinusuportahan ng device na ito ang Bluetooth Low Energy (BLE) na kailangan para gumana ang bluewhale.\n\nKailangan ang BLE para bumuo ng mesh at makipag‑ugnayan sa kalapit na device kahit walang internet.</string>
     <string name="checking_bluetooth_status">Sinusuri ang status ng Bluetooth…</string>
     <string name="battery_optimization_detected_title">natukoy ang pag‑optimize ng baterya</string>
     <string name="battery_optimization_enabled_title">Naka‑enable ang pag‑optimize</string>
-    <string name="battery_optimization_explanation_short">kailangang tumakbo ang bitchat sa background para sa mesh; maaaring putulin ito ng pag‑optimize.</string>
+    <string name="battery_optimization_explanation_short">kailangang tumakbo ang bluewhale sa background para sa mesh; maaaring putulin ito ng pag‑optimize.</string>
     <string name="benefits_of_disabling">Mga benepisyo ng pag‑disable</string>
     <string name="battery_benefits_short">• maaasahang paghatid\n• panatilihin ang koneksyon\n• iwas putol</string>
     <string name="disable_battery_optimization">I‑disable ang pag‑optimize</string>
@@ -278,9 +278,9 @@
     <string name="privacy_bullets">• walang tracking o koleksiyon\n• offline ang mesh chat sa Bluetooth\n• gumagamit ng internet ang geohash chat</string>
     <string name="permissions_header">mga permiso</string>
     <string name="grant_permissions">Payagan</string>
-    <string name="location_tracking_warning">HINDI sinusubaybayan ng bitchat ang lokasyon mo</string>
+    <string name="location_tracking_warning">HINDI sinusubaybayan ng bluewhale ang lokasyon mo</string>
     <string name="at_symbol">@</string>
-    <string name="app_brand">bitchat/</string>
+    <string name="app_brand">bluewhale/</string>
     <string name="channel_count_prefix"> · ⧉ </string>
     <string name="geohash_people_header">TAO</string>
     <string name="nobody_around">walang tao sa paligid…</string>
@@ -327,14 +327,14 @@
     <string name="cd_pause_voice">I‑pause</string>
 
     <!-- Mga paglalarawan ng permiso -->
-    <string name="perm_nearby_devices_desc">Kailangan upang makakita ng mga bitchat user sa Bluetooth</string>
-    <string name="perm_nearby_devices_system">Payagan ang bitchat na kumonekta sa kalapit na device</string>
+    <string name="perm_nearby_devices_desc">Kailangan upang makakita ng mga bluewhale user sa Bluetooth</string>
+    <string name="perm_nearby_devices_system">Payagan ang bluewhale na kumonekta sa kalapit na device</string>
     <string name="perm_location_desc">Kailangan ng Android para sa pagtuklas ng user sa Bluetooth</string>
-    <string name="perm_location_system">Kailangan ito ng bitchat para mag‑scan</string>
+    <string name="perm_location_system">Kailangan ito ng bluewhale para mag‑scan</string>
     <string name="perm_notifications_desc">Tumanggap ng abiso sa mga pribadong mensahe</string>
-    <string name="perm_notifications_system">Payagan ang bitchat na magpadala ng abiso</string>
+    <string name="perm_notifications_system">Payagan ang bluewhale na magpadala ng abiso</string>
     <string name="perm_battery_desc">I‑disable ang pag‑optimize upang tumakbo nang maaasahan at mapanatili ang mesh na koneksyon</string>
-    <string name="perm_battery_system">Payagan ang bitchat na tumakbo nang walang limitasyong baterya</string>
+    <string name="perm_battery_system">Payagan ang bluewhale na tumakbo nang walang limitasyong baterya</string>
 
     <!-- Mga uri ng permiso -->
     <string name="perm_type_nearby_devices">Kalapit na device</string>

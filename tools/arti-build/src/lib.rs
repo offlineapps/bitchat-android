@@ -267,7 +267,7 @@ pub extern "C" fn Java_org_torproject_arti_ArtiNative_startSocksProxy(
         log_info!("SOCKS proxy listening on {}", addr);
         log_info!("Sufficiently bootstrapped; system SOCKS now functional");
 
-        // Signal bootstrap completion to bitchat-android (expected by ArtiTorManager)
+        // Signal bootstrap completion to bluewhale-android (expected by ArtiTorManager)
         // This sets bootstrapPercent to 100% and stops inactivity restarts
         tokio::time::sleep(tokio::time::Duration::from_millis(500)).await;
         log_info!("We have found that guard [scrubbed] is usable.");
